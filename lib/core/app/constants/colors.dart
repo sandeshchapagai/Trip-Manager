@@ -1,6 +1,40 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  static const kPRIMARY = Colors.yellow;
+  static const kPRIMARYLIGHT = Color(0xffFEEAE8);
+  static const kPRIMARYSECONDARYLIGHT = Color(0xffFEF8F8);
+  static const kSECONDARY = Color(0xffF8F9F9);
+  static const kPRIMARYTEXT = Color(0xff282828);
+  static const kSECONDARYTEXT = Color(0xff333333);
+  static const kTERTIARYTEXT = Color(0xff4B4A54);
+  static const kQUATERNARYDARKBACKGROUND = Color(0xff4B4A54);
+  static const kQUATERNARYLIGHTBACKGROUND = Color(0xffF8F8F8);
+  static const kCAPTION = Color(0xff8b8b8b);
+  static const kHINT = Color(0xff8b8b8b);
+  static var kINPUTFILLED = Colors.grey[100];
+  static const kBARRIER = Colors.black54;
+  static const kBARRIER2 = Color.fromARGB(115, 147, 105, 105);
+  static const kBARRIER3 = Colors.black26;
+  static const kSTROKE = Color(0xffebe9f1);
+  static const kDARKTHEMESTROKE = Color(0XFF282828);
+  static const kERROR = Color(0xffDA0819);
+  static const kRED = Color(0xffDA0819);
+  static const kDARKRED = Color(0xffB42318);
+  static const kLIGHTRED = Color(0xffF97066);
+  static const kBROWN = Color(0xffB54708);
+  static const kWHITE = Color(0xffFFFFFF);
+  static const kPRIMARYBACKGROUND = Color(0xffF8F8F8);
+  static const kSECONDARYBACKGROUND = Color(0xffF2F4F7);
+  static const kTERTIARYBACKGROUND = Color(0xffE4E8F2);
+  static const kBACKGROUNDDARKTHEME = Color(0xff2F2B37);
+  static const kTRANSPARENT = Colors.transparent;
+  static const kPLACEHOLDER = Color(0xffEBE9F1);
+  static const kICON = Color(0xff344054);
+  static const kCARBONGREY = Color(0xff615C5C);
+  static const kORANGYRED = Color(0xffE33E30);
+  static const kBOXSHADOW = Color(0xff616161);
+
   //BLUE
   static const kBLUE = Color(0xff02A0FC);
   static const kDARKBLUE = Color(0xff2E64FA);
@@ -50,9 +84,4 @@ class AppColors {
   static Color kBLACKSHADE500 = const Color(0xff9CA3AF);
   static Color kBLACKSHADE600 = const Color(0xffD1D5DB);
   static Color kBLACKSHADE700 = const Color(0xffE5E7EB);
-
-  //Red
-  static const kERROR = Color(0xffDA0819);
-  static const kRED = Color(0xffDA0819);
-  static const kDARKRED = Color(0xffB42318);
 }

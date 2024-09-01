@@ -1,16 +1,205 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/responsive.dart';
+import '../constants/colors.dart';
 import '../constants/font_size.dart';
 import '../constants/styles.dart';
+import 'custom_theme_colors.dart';
 
 class AppThemeConfig {
+  static final elevatedButtonTheme = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      elevation: 2,
+      shadowColor: AppColors.kTRANSPARENT,
+      backgroundColor: AppColors.kPRIMARY,
+      foregroundColor: AppColors.kWHITE,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      ),
+    ),
+  );
+  static final textButtonTheme = TextButtonThemeData(
+    style: ButtonStyle(
+      overlayColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) {
+          if (states.contains(WidgetState.pressed)) {
+            return AppColors.kPRIMARY.withOpacity(
+                0.1); // The splash color when the button is pressed.
+          }
+          return null; // Use the component's default.
+        },
+      ),
+      elevation: WidgetStateProperty.all(2),
+      backgroundColor: WidgetStateProperty.all(AppColors.kTRANSPARENT),
+      shape: WidgetStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+      ),
+    ),
+  );
+
+  static final outlinedButtonTheme = OutlinedButtonThemeData(
+    style: ButtonStyle(
+      overlayColor: WidgetStateProperty.resolveWith<Color?>(
+        (Set<WidgetState> states) {
+          if (states.contains(WidgetState.pressed)) {
+            return AppColors.kPRIMARY.withOpacity(0.1);
+          }
+          return null;
+        },
+      ),
+      elevation: WidgetStateProperty.all(2),
+      backgroundColor: WidgetStateProperty.all(AppColors.kTRANSPARENT),
+      side: WidgetStateProperty.all(
+        const BorderSide(
+          color: AppColors.kPRIMARY,
+          width: .5,
+        ),
+      ),
+      shape: WidgetStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+      ),
+    ),
+  );
+  static final checkBoxTheme = CheckboxThemeData(
+    checkColor: WidgetStateProperty.all(AppColors.kWHITE),
+  );
+
+  static const bottomSheetThemeData = BottomSheetThemeData(
+    modalBarrierColor: AppColors.kBARRIER3,
+    elevation: 0,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20.0),
+        topRight: Radius.circular(20.0),
+      ),
+    ),
+  );
+
+  static const progressIndicatorTheme =
+      ProgressIndicatorThemeData(color: AppColors.kPRIMARY);
+
+  static AppBarTheme appBarTheme(
+          {required Color textColor, required Color backgroundColor}) =>
+      AppBarTheme(
+        titleTextStyle: customTextStyle(
+            fontSize: FontSize.kS18,
+            fontWeight: FontWeight.w500,
+            color: textColor),
+        backgroundColor: backgroundColor,
+      );
+
   static ColorScheme colorScheme(
           {required Color seedColor, required Brightness brightness}) =>
       ColorScheme.fromSeed(
         seedColor: seedColor,
-        // primary: AppColors.kPRIMARY,
+        primary: AppColors.kPRIMARY,
         brightness: brightness,
       );
+
+  static DialogTheme dialogTheme({Color? color}) => DialogTheme(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Responsive.kAppBorderRadius7),
+      ),
+      surfaceTintColor: color);
+
+  static DividerThemeData dividerTheme({required Color color}) =>
+      DividerThemeData(color: color, thickness: .6);
+
+  static ExpansionTileThemeData expansionTileThemeData(
+          {required Color dividerColor}) =>
+      ExpansionTileThemeData(
+        childrenPadding: const EdgeInsets.fromLTRB(15, 0, 10, 15),
+        tilePadding: const EdgeInsets.only(left: 15, right: 10),
+        collapsedShape: RoundedRectangleBorder(
+            side: BorderSide(color: dividerColor),
+            borderRadius: BorderRadius.circular(5)),
+        shape: RoundedRectangleBorder(
+            side: BorderSide(color: dividerColor),
+            borderRadius: BorderRadius.circular(5)),
+      );
+
+  static IconThemeData iconTheme({required Color color}) =>
+      IconThemeData(color: color);
+
+  static InputDecorationTheme inputDecorationTheme({
+    required Color label,
+    required Color hint,
+    Color? darkThemeBorder,
+    Color? darkTheme,
+    Color? darkErrorTheme,
+  }) =>
+      InputDecorationTheme(
+        prefixStyle: TextStyle(color: darkTheme ?? AppColors.kBLACK),
+        errorMaxLines: 2,
+        errorStyle:
+            customTextStyle(fontSize: FontSize.kS12, color: darkErrorTheme),
+        labelStyle: customTextStyle(fontSize: FontSize.kS13, color: label),
+        hintStyle: customTextStyle(
+          fontSize: FontSize.kS13,
+          color: hint,
+          fontWeight: FontWeight.w400,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 1,
+            color: darkThemeBorder ?? AppColors.kGREYSHADE400,
+          ),
+          borderRadius: BorderRadius.circular(Responsive.kInputBorderRadius),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: .5,
+            color: darkThemeBorder ?? AppColors.kGREYSHADE300,
+          ),
+          borderRadius: BorderRadius.circular(Responsive.kInputBorderRadius),
+        ),
+        border: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: .5,
+              color: darkThemeBorder ?? AppColors.kGREYSHADE300,
+            ),
+            borderRadius: BorderRadius.circular(Responsive.kInputBorderRadius)),
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            width: .5,
+            color: AppColors.kERROR,
+          ),
+          borderRadius: BorderRadius.circular(Responsive.kInputBorderRadius),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: .5,
+            color: darkThemeBorder ?? AppColors.kGREYSHADE300,
+          ),
+          borderRadius: BorderRadius.circular(Responsive.kInputBorderRadius),
+        ),
+      );
+
+  static PageTransitionsTheme pageTransitionsTheme() =>
+      const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        },
+      );
+
+  static tabBarTheme() => TabBarTheme(
+        dividerColor: AppColors.kTRANSPARENT,
+        indicatorColor: AppColors.kPRIMARY,
+        indicatorSize: TabBarIndicatorSize.tab,
+        overlayColor: WidgetStateProperty.all(AppColors.kTRANSPARENT),
+        labelStyle: customTextStyle(
+            color: AppColors.kPRIMARY,
+            fontSize: FontSize.kS15,
+            fontWeight: FontWeight.w500),
+        unselectedLabelStyle: customTextStyle(
+            fontSize: FontSize.kS15, fontWeight: FontWeight.w500),
+      );
+
   static TextTheme textTheme({
     required Color primaryText, //For title.
     Color? secondaryText, //For sub-title.
@@ -84,4 +273,19 @@ class AppThemeConfig {
           fontWeight: FontWeight.w500,
         ),
       );
+
+  static List<ThemeExtension<CustomThemeColors>> themeExtension({
+    Color? whiteTheme,
+    Color? darkTheme,
+    Color? darkBackgroundTheme,
+    Color? darkInputFilled,
+    Color? quaternaryDarkBackground,
+    Color? darkModeSecondaryText,
+    Color? darkModeThemeCaption,
+  }) =>
+      [
+        CustomThemeColors(
+          primary: AppColors.kPRIMARY,
+        ),
+      ];
 }

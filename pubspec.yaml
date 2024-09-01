@@ -49,7 +49,6 @@ flutter:
     - assets/icons/
     - assets/json/
     - .env
-    - shorebird.yaml
 
   fonts:
     - family: Poppins
