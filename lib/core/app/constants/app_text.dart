@@ -11,4 +11,7 @@ class AppText {
   static const lightTheme = "light";
   static const darkTheme = "dark";
   static const systemTheme = "system";
+
+  //Splash
+  static const loggedIn = "Logged In";
 }

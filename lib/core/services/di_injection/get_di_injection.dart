@@ -1,6 +1,11 @@
+import 'package:trip_manager/data/repositories/splash/splash_repository.dart';
+
 import '../../utils/local_storage/hive_storage.dart';
 import '../../utils/local_storage/secure_storage.dart';
 import 'di_injection.dart';
 
 final hiveStorage = sl.get<HiveStorage>();
 final secureStorage = sl.get<SecureStorage>();
+
+//Repository
+final splashRepository = sl.get<SplashRepository>();
