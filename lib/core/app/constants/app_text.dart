@@ -1,5 +1,6 @@
 class AppText {
   static const appName = "Trip Manager";
+  static const appDescription = "One App For Trip";
   static const fontFamily = "Poppins";
 
   static const responseMessage = "message";

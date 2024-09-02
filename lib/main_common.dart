@@ -21,7 +21,7 @@ import 'core/utils/scroll_behavior_configuration.dart';
 
 Future<void> initMainCommon({required Flavor flavor}) async {
   await initServices(flavor: flavor);
-  runApp(const RestroxApp());
+  runApp(const TripManagerApp());
 }
 
 initServices({required Flavor flavor}) async {
@@ -37,8 +37,8 @@ initServices({required Flavor flavor}) async {
   Bloc.observer = AppBlocObserver();
 }
 
-class RestroxApp extends StatelessWidget {
-  const RestroxApp({super.key});
+class TripManagerApp extends StatelessWidget {
+  const TripManagerApp({super.key});
 
   @override
   Widget build(BuildContext context) {

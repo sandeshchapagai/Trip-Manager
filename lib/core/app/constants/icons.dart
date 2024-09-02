@@ -1,3 +1,8 @@
 const baseIconPath = 'assets/icons/';
-// final kActivity2Icon = _getBasePath("Activity2.svg"); ///Icon Example
+
+//icons
+final kActivity2Icon = _getBasePath("Activity.svg");
+final kAirPlayIcon = _getBasePath("AirPlay.svg");
+final kGreenCircleCheckIcon = _getBasePath("AirPlay.svg");
+final kSearchIcon = _getBasePath("Search.svg");
 String _getBasePath(String name) => baseIconPath + name;
