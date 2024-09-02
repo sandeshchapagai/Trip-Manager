@@ -13,11 +13,10 @@ class CustomImagePreviewWidget extends StatelessWidget {
   final bool isNetworkImg;
   final bool isAssestImg;
   const CustomImagePreviewWidget(
-      {Key? key,
+      {super.key,
       this.imgPath,
       this.isNetworkImg = true,
-      this.isAssestImg = false})
-      : super(key: key);
+      this.isAssestImg = false});
 
   @override
   Widget build(BuildContext context) {

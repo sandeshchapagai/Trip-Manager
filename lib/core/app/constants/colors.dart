@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const kPRIMARY = Colors.yellow;
-  static const kPRIMARYLIGHT = Color(0xffFEEAE8);
+  static const kPRIMARY = Color(0xff28DF99);
+  static const kPRIMARYLIGHT = Color(0xff99F3BD);
   static const kPRIMARYSECONDARYLIGHT = Color(0xffFEF8F8);
-  static const kSECONDARY = Color(0xffF8F9F9);
+  static const kSECONDARY = Color(0xffD2F6C5);
+  static const kTERTEORY = Color(0xffF6F7D4);
   static const kPRIMARYTEXT = Color(0xff282828);
   static const kSECONDARYTEXT = Color(0xff333333);
   static const kTERTIARYTEXT = Color(0xff4B4A54);
