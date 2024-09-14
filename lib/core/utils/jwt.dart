@@ -11,10 +11,6 @@ class Jwt {
       var payload = utf8.decode(base64Url.decode(normalizedSource));
       var decodedPayload = jwtHivePayloadModelFromJson(payload);
       hiveStorage.saveJwtPayload(value: decodedPayload);
-      if (decodedPayload.restaurantId != null) {
-        await secureStorage.saveActiveRestaurantId(
-            id: decodedPayload.restaurantId);
-      }
     }
   }
 
