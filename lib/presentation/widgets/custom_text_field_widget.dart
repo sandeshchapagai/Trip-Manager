@@ -24,6 +24,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       prefixText;
 
   final bool? enableInteractiveSelection;
+  final TextStyle? style;
   final TextInputType textInputType;
   final TextInputAction textInputAction;
   final AutovalidateMode autovalidateMode;
@@ -56,7 +57,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       titleTrailingWidget,
       titleLeadingWidget,
       notifyWidget;
-  final Color? fillcolor, borderColor;
+  final Color? fillcolor, borderColor,titleColor;
   final int? maxline, maxLength;
   final FilteringTextInputFormatter? textInputFormatter;
   final EdgeInsetsGeometry? contentPadding;
@@ -64,6 +65,8 @@ class CustomTextFieldWidget extends StatelessWidget {
 
   CustomTextFieldWidget({
     super.key,
+    this.style,
+    this.titleColor,
     this.textEditingController,
     this.textInputFormatter,
     this.textAlign,
@@ -125,6 +128,7 @@ class CustomTextFieldWidget extends StatelessWidget {
             child: CustomMandatoryTitleWidget(
               isMandatory: isMandatory,
               title: title,
+              color: titleColor,
               fontSize: titleFontSize,
               isVerified: isVerified,
               titleTrailingWidget: titleTrailingWidget,
@@ -192,7 +196,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           readOnly: readOnly,
           focusNode: focusNode,
           enableInteractiveSelection: enableInteractiveSelection,
-          style: customTextStyle(),
+          style: style,
           decoration: InputDecoration(
             counterText: '',
             isDense: true,
