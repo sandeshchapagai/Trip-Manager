@@ -21,6 +21,7 @@ import 'core/utils/scroll_behavior_configuration.dart';
 
 Future<void> initMainCommon({required Flavor flavor}) async {
   await initServices(flavor: flavor);
+
   runApp(const TripManagerApp());
 }
 
