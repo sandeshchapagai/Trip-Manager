@@ -15,4 +15,7 @@ class AppText {
 
   //Splash
   static const loggedIn = "Logged In";
+
+  //General
+  static const home = "Home";
 }
