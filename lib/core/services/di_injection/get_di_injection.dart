@@ -1,3 +1,4 @@
+import 'package:trip_manager/data/repositories/bottom_navigation/bottom_navigation_repository.dart';
 import 'package:trip_manager/data/repositories/splash/splash_repository.dart';
 
 import '../../utils/local_storage/hive_storage.dart';
@@ -9,3 +10,4 @@ final secureStorage = sl.get<SecureStorage>();
 
 //Repository
 final splashRepository = sl.get<SplashRepository>();
+final bottomNavigationRepository = sl.get<BottomNavigationRepository>();

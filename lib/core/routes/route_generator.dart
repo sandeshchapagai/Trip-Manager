@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trip_manager/core/routes/route_config.dart';
+import 'package:trip_manager/presentation/screens/dashboard/dashboard_screen.dart';
 import 'package:trip_manager/presentation/screens/main/main_screen.dart';
 import 'package:trip_manager/presentation/screens/splash/splash_screen.dart';
 
@@ -10,6 +11,8 @@ class RouteGenerator {
         MaterialPageRoute(builder: (_) => const SplashScreen()),
       RouteConfig.boardingRoute =>
         MaterialPageRoute(builder: (_) => const MainScreen()),
+      RouteConfig.homeRoute =>
+        MaterialPageRoute(builder: (_) => const DashboardScreen()),
       _ => null
     };
   }
