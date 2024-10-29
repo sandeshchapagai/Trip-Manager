@@ -18,4 +18,7 @@ class AppText {
 
   //General
   static const home = "Home";
+  static const friends = "Friends";
+  static const expense = "Expense";
+  static const settings = "Settings";
 }

@@ -16,3 +16,5 @@ enum AppStatus {
   logout,
   confirmation,
 }
+
+enum AppInitialization { disableAppRefetch }

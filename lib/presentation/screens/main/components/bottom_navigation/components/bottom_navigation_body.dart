@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trip_manager/core/utils/theme_extensions.dart';
 import 'package:trip_manager/presentation/screens/main/components/bottom_navigation/components/widgets/custom_navigation_bar_item.dart';
 
 import '../../../../../../bloc/theme/bottom_navigation_bloc.dart';
 import '../../../../../../core/app/constants/styles.dart';
 import '../../../../../../core/services/di_injection/get_di_injection.dart';
-import '../../../../../../core/utils/theme_extensions.dart';
 
 class BottomNavigationBody extends StatelessWidget {
   const BottomNavigationBody({super.key});
@@ -20,9 +20,6 @@ class BottomNavigationBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 decoration: BoxDecoration(
                   color: context.bottomNavigationBarTheme.backgroundColor,
-                  border: Border(
-                    top: BorderSide(color: context.dividerTheme.color!),
-                  ),
                 ),
                 child: BottomNavigationBar(
                   currentIndex: state.currentIndex,
