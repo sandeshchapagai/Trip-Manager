@@ -8,7 +8,9 @@ import 'custom_text_field_widget.dart';
 class CustomSearchTextFormWidget extends StatelessWidget {
   final Function? onChanged;
   final bool showSuffixIcon;
+  final bool readOnly;
   final Function()? onSuffixTap;
+  final Function()? onTap;
   final TextEditingController? textEditingController;
   final bool isVisible;
   final bool autofocus;
@@ -18,11 +20,13 @@ class CustomSearchTextFormWidget extends StatelessWidget {
   const CustomSearchTextFormWidget({
     super.key,
     required this.onChanged,
+    this.onTap,
     this.showSuffixIcon = false,
     this.textEditingController,
     this.onSuffixTap,
     this.isVisible = true,
     this.autofocus = false,
+    this.readOnly = false,
     this.focusNode,
     this.hintText,
   });
@@ -32,6 +36,8 @@ class CustomSearchTextFormWidget extends StatelessWidget {
     return Visibility(
       visible: isVisible,
       child: CustomTextFieldWidget(
+        onTap: onTap,
+        readOnly: readOnly,
         textEditingController: textEditingController,
         focusNode: focusNode,
         autofocus: autofocus,

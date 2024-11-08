@@ -10,4 +10,9 @@ final kCalculatorIcon = _getBasePath("Calculator.svg");
 final kSettingsIcon = _getBasePath("Settings.svg");
 final kFriendsIcon = _getBasePath("Friends.svg");
 final kExpenseIcon = _getBasePath("Expense.svg");
+final kBusIcon = _getBasePath("Bus.svg");
+final kAirplaneIcon = _getBasePath("Airplane.svg");
+final kTaxiIcon = _getBasePath("Taxi.svg");
+final kChevronRightIcon = _getBasePath("ChevronRight.svg");
+
 String _getBasePath(String name) => baseIconPath + name;
