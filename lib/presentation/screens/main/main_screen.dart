@@ -9,18 +9,24 @@ import 'package:trip_manager/core/utils/responsive.dart';
 import 'package:trip_manager/core/utils/theme_extensions.dart';
 import 'package:trip_manager/presentation/widgets/custom_button_widget.dart';
 
+import '../../../core/services/di_injection/get_di_injection.dart';
 import '../../widgets/custom_text_field_widget.dart';
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(kBackground), // Replace with your image path
+            image: AssetImage(kBackground),
             fit: BoxFit.cover,
           ),
         ),
@@ -44,8 +50,10 @@ class MainScreen extends StatelessWidget {
                 kVCreateButtonGap,
                 CustomButton(buttonType: ButtonType.text).widget(
                     context: context,
-                    runCode: () => RouteNavigator.navigateNamed(
-                        context, RouteConfig.homeRoute),
+                    runCode: () {
+                      RouteNavigator.navigateNamed(
+                          context, RouteConfig.homeRoute);
+                    },
                     title: "Sign In",
                     titleColor: context.colors.white,
                     backgroundColor: context.colors.primary)
@@ -54,6 +62,14 @@ class MainScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    mainRepository.initMainScreen(
+      context: context,
     );
   }
 }
