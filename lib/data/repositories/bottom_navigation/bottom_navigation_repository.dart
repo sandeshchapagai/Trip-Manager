@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trip_manager/core/app/constants/icons.dart';
-import 'package:trip_manager/presentation/screens/dashboard/components/expense/expense_screen.dart';
 import 'package:trip_manager/presentation/screens/dashboard/components/friends/friends_screen.dart';
 import 'package:trip_manager/presentation/screens/dashboard/components/home/home_screen.dart';
 
@@ -15,7 +14,7 @@ class BottomNavigationRepository {
   List<Widget> navbarPages = [
     const HomeScreen(),
     const FriendsScreen(),
-    const ExpenseScreen(),
+    const Placeholder(),
     const Placeholder(),
   ];
 
