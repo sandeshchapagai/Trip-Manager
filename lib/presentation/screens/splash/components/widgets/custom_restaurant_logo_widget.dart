@@ -4,15 +4,15 @@ class CustomRestaurantLogoWidget extends StatelessWidget {
   final double? logoWidth, logoHeight, textLogoWidth;
 
   const CustomRestaurantLogoWidget({
-    Key? key,
+    super.key,
     this.logoHeight,
     this.logoWidth,
     this.textLogoWidth,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [],

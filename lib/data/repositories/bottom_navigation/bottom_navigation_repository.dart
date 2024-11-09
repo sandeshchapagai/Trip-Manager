@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trip_manager/core/app/constants/icons.dart';
-import 'package:trip_manager/presentation/screens/dashboard/components/friends/friends_screen.dart';
-import 'package:trip_manager/presentation/screens/dashboard/components/home/home_screen.dart';
 
 import '../../../../../../bloc/theme/bottom_navigation_bloc.dart';
 import '../../../../../../core/app/constants/app_text.dart';
 import '../../../../../../core/routes/route_navigator.dart';
 import '../../../../../../data/models/app_static/app_static_model.dart';
+import '../../../presentation/screens/friends/friends_screen.dart';
+import '../../../presentation/screens/home/home_screen.dart';
 import '../../../presentation/screens/main/main_screen.dart';
 
 class BottomNavigationRepository {

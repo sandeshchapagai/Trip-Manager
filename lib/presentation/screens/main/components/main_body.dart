@@ -10,7 +10,7 @@ class MainBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomText(text: "lfnskhjkjbhn"),
+        const CustomText(text: "lfnskhjkjbhn"),
         CustomImageAssetWidget(
           image: kBackground,
           height: 100,
