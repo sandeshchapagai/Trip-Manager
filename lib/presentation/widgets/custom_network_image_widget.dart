@@ -34,7 +34,7 @@ class CustomNetworkImageWidget extends StatelessWidget {
       ),
       errorWidget: (context, url, error) => Container(
           padding: const EdgeInsets.all(8),
-          child: Image(image: AssetImage(""))),
+          child: const Image(image: AssetImage(""))),
       fit: boxFit,
       height: height,
       width: width,

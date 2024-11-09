@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trip_manager/presentation/screens/dashboard/components/expense/components/expense_body.dart';
+
+import 'components/expense_body.dart';
 
 class ExpenseScreen extends StatelessWidget {
   const ExpenseScreen({super.key});

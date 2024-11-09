@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trip_manager/presentation/screens/dashboard/components/home/components/home_body.dart';
+
+import 'components/home_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
