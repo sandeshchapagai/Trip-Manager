@@ -57,7 +57,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       titleTrailingWidget,
       titleLeadingWidget,
       notifyWidget;
-  final Color? fillcolor, borderColor,titleColor;
+  final Color? fillcolor, borderColor, titleColor;
   final int? maxline, maxLength;
   final FilteringTextInputFormatter? textInputFormatter;
   final EdgeInsetsGeometry? contentPadding;
@@ -205,6 +205,7 @@ class CustomTextFieldWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: kHBox1),
                     child: CustomSvgWidget(
                       icon: kSearchIcon,
+                      color: context.colors.primary,
                     ),
                   )
                 : prefix != null
