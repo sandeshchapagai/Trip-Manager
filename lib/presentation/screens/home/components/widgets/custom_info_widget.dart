@@ -35,7 +35,7 @@ class CustomInfoWidget extends StatelessWidget {
             kHSizedBox1,
             CustomText(
               decorationColor: context.colors.green,
-              color: context.colors.green,
+              color: context.colors.primary,
               text: secondText ?? "",
               fontWeight: FontWeight.w600,
               fontSize: FontSize.kS16,
@@ -48,7 +48,10 @@ class CustomInfoWidget extends StatelessWidget {
               text: trialingText,
               fontWeight: FontWeight.w500,
             ),
-            CustomSvgWidget(icon: kChevronRightIcon)
+            CustomSvgWidget(
+              icon: kChevronRightIcon,
+              height: 20,
+            )
           ],
         )
       ],
