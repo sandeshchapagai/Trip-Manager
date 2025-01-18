@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const kPRIMARY = Color(0xff28DF99);
-  static const kPRIMARYLIGHT = Color(0xff99F3BD);
+  static const kPRIMARY = Color(0xffff7b00);
+  static const kPRIMARYLIGHT = Color(0xffB76B);
   static const kPRIMARYSECONDARYLIGHT = Color(0xffFEF8F8);
   static const kSECONDARY = Color(0xffD2F6C5);
   static const kTERTEORY = Color(0xffF6F7D4);
@@ -25,8 +25,8 @@ class AppColors {
   static const kLIGHTRED = Color(0xffF97066);
   static const kBROWN = Color(0xffB54708);
   static const kWHITE = Color(0xffFFFFFF);
-  static const kPRIMARYBACKGROUND = Color(0xffF8F8F8);
-  static const kSECONDARYBACKGROUND = Color(0xffF2F4F7);
+  static const kPRIMARYBACKGROUND = Color(0xfffdfbf6);
+  static const kSECONDARYBACKGROUND = Color(0xfffaf2df);
   static const kTERTIARYBACKGROUND = Color(0xffE4E8F2);
   static const kBACKGROUNDDARKTHEME = Color(0xff2F2B37);
   static const kTRANSPARENT = Colors.transparent;

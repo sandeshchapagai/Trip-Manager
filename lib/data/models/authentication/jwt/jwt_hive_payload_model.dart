@@ -57,7 +57,6 @@ class JwtHivePayloadModel {
   factory JwtHivePayloadModel.fromJson(Map<String, dynamic> json) =>
       JwtHivePayloadModel(
         userId: json["userId"],
-        restaurantId: json["restaurantId"],
         role: json["role"],
         permissions: List<Permission>.from(
             json["permissions"]?.map((x) => Permission.fromJson(x)) ?? []),

@@ -16,6 +16,6 @@ extension ThemeExtensions on BuildContext {
       Theme.of(this).inputDecorationTheme;
   bool get isDarkMode => Theme.of(this).brightness == Brightness.dark;
   Color get scaffoldBackgroundColor => Theme.of(this).scaffoldBackgroundColor;
-  TabBarTheme get tabBarTheme => Theme.of(this).tabBarTheme;
+  TabBarThemeData get tabBarTheme => Theme.of(this).tabBarTheme;
   TextTheme get textTheme => Theme.of(this).textTheme;
 }

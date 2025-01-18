@@ -21,15 +21,10 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: context.colors.primary
-          // image: DecorationImage(
-          //   image: AssetImage(kBackground),
-          //   fit: BoxFit.cover,
-          // ),
-          ),
+      decoration: BoxDecoration(color: context.colors.primary),
       child: ListView(
         children: [
-          kVSizedBox8,
+          kVSizedBox3,
           Responsive(
             context: context,
             child: CustomSearchTextFormWidget(
@@ -38,7 +33,7 @@ class HomeBody extends StatelessWidget {
               hintText: "Search Place ",
             ),
           ),
-          kVSizedBox5,
+          kVSizedBox3,
           Container(
             decoration: BoxDecoration(
                 color: context.colors.primaryBackground,
@@ -95,7 +90,7 @@ class HomeBody extends StatelessWidget {
                   const CustomInfoWidget(
                       firstText: 'Personalized',
                       secondText: 'trips',
-                      trialingText: "view All"),
+                      trialingText: "View All"),
                   kVSizedBox1,
                   SizedBox(
                     height: appHeight(context) * 0.25,
@@ -159,7 +154,7 @@ class HomeBody extends StatelessWidget {
                   const CustomInfoWidget(
                       firstText: 'Stories by',
                       secondText: 'travellers',
-                      trialingText: "view All"),
+                      trialingText: "View All"),
                   kVSizedBox1,
                   ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
