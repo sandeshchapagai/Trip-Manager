@@ -187,7 +187,7 @@ class AppThemeConfig {
         },
       );
 
-  static tabBarTheme() => TabBarTheme(
+  static tabBarTheme() => TabBarThemeData(
         dividerColor: AppColors.kTRANSPARENT,
         indicatorColor: AppColors.kPRIMARY,
         indicatorSize: TabBarIndicatorSize.tab,

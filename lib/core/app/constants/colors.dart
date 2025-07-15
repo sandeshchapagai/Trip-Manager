@@ -1,18 +1,46 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const kPRIMARY = Color(0xffff7b00);
-  static const kPRIMARYLIGHT = Color(0xffB76B);
-  static const kPRIMARYSECONDARYLIGHT = Color(0xffFEF8F8);
-  static const kSECONDARY = Color(0xffD2F6C5);
-  static const kTERTEORY = Color(0xffF6F7D4);
-  static const kPRIMARYTEXT = Color(0xff282828);
-  static const kSECONDARYTEXT = Color(0xff333333);
-  static const kTERTIARYTEXT = Color(0xff4B4A54);
-  static const kQUATERNARYDARKBACKGROUND = Color(0xff4B4A54);
-  static const kQUATERNARYLIGHTBACKGROUND = Color(0xffF8F8F8);
-  static const kCAPTION = Color(0xff8b8b8b);
-  static const kHINT = Color(0xff8b8b8b);
+  // Primary Travel Colors
+  static const Color kTURQUOISE = Color(0xFF07DFD4);
+  static const Color kSoftTURQUOISE = Color(0xFF0A8F8F);
+  // Turquoise
+  static const Color kCORAL_RED = Color(0xFFF05158);
+  static const Color kTEAL = Color(0xFF14A49C);
+
+  // Expense Tracker Colors
+  static const Color kRUST = Color(0xFFC03C15); // Rust
+  static const Color kPOLISHED_PINE = Color(0xFF4FAB9A); // Polished Pine
+  static const Color kLIGHT_BLUE = Color(0xFFBED4D9); // Light Blue
+
+  // Neutral Backgrounds & Text
+  static const Color kSOFT_BEIGE = Color(0xFFE9DAC4); // Soft Beige
+  static const Color kMUTED_GRAY = Color(0xFF504450); // Muted Gray
+
+  // Example usage for app-wide primary colors
+  static const Color kPRIMARY = kSoftTURQUOISE;
+  static const Color kPRIMARY_FEED = kCORAL_RED;
+  static const Color kPRIMARY_SPLITTER = kRUST;
+
+  // Backgrounds
+  static const Color kBACKGROUND_PRIMARY = kSOFT_BEIGE;
+  static const Color kBACKGROUND_SECONDARY = kLIGHT_BLUE;
+
+  // Text colors
+  static const Color kTEXT_PRIMARY = kMUTED_GRAY;
+
+  // Your existing colors below (unchanged)
+  static const Color kPRIMARYLIGHT = Color(0xff00B76B); // fixed invalid hex
+  static const Color kPRIMARYSECONDARYLIGHT = Color(0xffFEF8F8);
+  static const Color kSECONDARY = Color(0xffD2F6C5);
+  static const Color kTERTIARY = Color(0xffF6F7D4);
+  static const Color kPRIMARYTEXT = Color(0xff282828);
+  static const Color kSECONDARYTEXT = Color(0xff333333);
+  static const Color kTERTIARYTEXT = Color(0xff4B4A54);
+  static const Color kQUATERNARYDARKBACKGROUND = Color(0xff4B4A54);
+  static const Color kQUATERNARYLIGHTBACKGROUND = Color(0xffF8F8F8);
+  static const Color kCAPTION = Color(0xff8b8b8b);
+  static const Color kHINT = Color(0xff8b8b8b);
   static var kINPUTFILLED = Colors.grey[100];
   static const kBARRIER = Colors.black54;
   static const kBARRIER2 = Color.fromARGB(115, 147, 105, 105);
@@ -57,13 +85,11 @@ class AppColors {
   static const kPRIMARYDARKGREEN = Color(0xff027A48);
 
   //PURPLE
-  static const kPURPLELIGHT = Color(0xfFE8E2F6);
+  static const kPURPLELIGHT = Color(0xFFE8E2F6);
   static const kPURPLE = Color(0xff6941C6);
 
   //THEME
   static const kDARKTHEME = Color(0xff121212);
-
-  // static const kLIGHTTHEME = Color(0xff9CA3AF);
   static const kLIGHTTHEME = Color(0xffFFFFFF);
 
   //GREY VARIANT

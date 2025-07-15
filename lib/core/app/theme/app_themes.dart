@@ -42,7 +42,6 @@ class AppThemes {
     iconTheme: AppThemeConfig.iconTheme(color: AppColors.kICON),
     checkboxTheme: AppThemeConfig.checkBoxTheme,
     dialogBackgroundColor: AppColors.kWHITE,
-    dialogTheme: AppThemeConfig.dialogTheme(color: AppColors.kWHITE),
     tabBarTheme: AppThemeConfig.tabBarTheme(),
     pageTransitionsTheme: AppThemeConfig.pageTransitionsTheme(),
     expansionTileTheme:
@@ -93,7 +92,6 @@ class AppThemes {
     bottomSheetTheme: AppThemeConfig.bottomSheetThemeData,
     iconTheme: AppThemeConfig.iconTheme(color: AppColors.kLIGHTTHEME),
     checkboxTheme: AppThemeConfig.checkBoxTheme,
-    dialogTheme: AppThemeConfig.dialogTheme(),
     tabBarTheme: AppThemeConfig.tabBarTheme(),
     pageTransitionsTheme: AppThemeConfig.pageTransitionsTheme(),
     expansionTileTheme: AppThemeConfig.expansionTileThemeData(
