@@ -10,13 +10,14 @@ import '../../../../../../data/models/app_static/app_static_model.dart';
 import '../../../presentation/screens/friends/friends_screen.dart';
 import '../../../presentation/screens/home/home_screen.dart';
 import '../../../presentation/screens/main/main_screen.dart';
+import '../../../presentation/screens/setting/setting.dart';
 
 class BottomNavigationRepository {
   List<Widget> navbarPages = [
     const HomeScreen(),
     const FriendsScreen(),
     const ExpenseScreen(),
-    const Placeholder(),
+    SettingsPage(),
   ];
 
   List<AppStaticModel> navbarItem = [

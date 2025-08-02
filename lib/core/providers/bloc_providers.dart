@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trip_manager/bloc/expense_bloc.dart';
 import 'package:trip_manager/bloc/theme/bottom_navigation_bloc.dart';
 
 import '../../bloc/theme/theme_bloc.dart';
@@ -11,5 +12,6 @@ class BlocProviders {
           ..add(ThemeModeSwitched(themeMode: ThemeModes.getThemeMode()))),
     BlocProvider<BottomNavigationBloc>(
         create: (context) => BottomNavigationBloc()),
+    BlocProvider<ExpenseBloc>(create: (context) => ExpenseBloc()),
   ];
 }

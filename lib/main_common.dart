@@ -53,7 +53,7 @@ class TripManagerApp extends StatelessWidget {
               scrollBehavior: ScrollBehaviorConfiguration(),
               navigatorKey: AppStates.globalKey,
               title: AppText.appName,
-              theme: AppThemes.lightTheme,
+              theme: AppThemes.darkTheme,
               darkTheme: AppThemes.darkTheme,
               themeMode: state.themeMode,
               initialRoute: RouteConfig.initialRoute,
