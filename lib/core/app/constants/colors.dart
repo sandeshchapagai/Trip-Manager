@@ -18,7 +18,7 @@ class AppColors {
   static const Color kMUTED_GRAY = Color(0xFF504450); // Muted Gray
 
   // Example usage for app-wide primary colors
-  static const Color kPRIMARY = kSoftTURQUOISE;
+  static const Color kPRIMARY = kTEAL;
   static const Color kPRIMARY_FEED = kCORAL_RED;
   static const Color kPRIMARY_SPLITTER = kRUST;
 

@@ -7,6 +7,6 @@ class ExpenseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ExpenseBody();
+    return GroupListScreen();
   }
 }
